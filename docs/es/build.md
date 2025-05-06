@@ -2,27 +2,27 @@
 
 En esta guia te explica como encontrar los arboles de dispositivos, requerimientos, preparacion del entorno de compilacion y mucho mas.    
 
-## Requisitos
+!!! abstract "Requisitos"
 
- - Un procesador decente de 64Bits    
- - Linux corriendo (recomiendo Ubuntu)     
- - 32GB de RAM     
- - 500GB+ HDD (recomiendo SSD)     
- - un buen internet (o al menos uno muy estable durante mucho tiempo)     
- - sentido comun     
- - algo de conocimiento en el manejo de la terminal de linux     
+     - Un procesador decente de 64Bits    
+     - Linux corriendo (recomiendo Ubuntu)     
+     - 32GB de RAM     
+     - 500GB+ HDD (recomiendo SSD)     
+     - un buen internet (o al menos uno muy estable durante mucho tiempo)     
+     - sentido comun     
+     - algo de conocimiento en el manejo de la terminal de linux     
 
 puedes usar especificaci"nes menores? si, estas son las mas recomendadas pero puedes probar otras, puedes por ejemplo utilizar una cantidad enorme de swap o esperar 3 dias para compilar una rom pero con estas especificaciones puedes estar seguro de que no tendras problemas     
 otra recomendacion es que si te vas a armar una pc para compiolar siempre busques AMD, la compilacion es un trabajo que exige a todo el CPU en conjunto y un buen procesador multi nucleo hace la diferencia    
 
-## Recomendaciones
+!!! tip "Recomendaciones"
 
- - Haz solo Lineage     
-   - para el primer intento te recomiendo que pruebes una rom simple, no pruebes aospa, yaap y roms que no tengan bases seguras     
- - [Aprende git](git.md)     
-   - no es necesario para crear la rom pero lo necesitaras cuando quieras hacer cambios y no quieres publicar cambios sin autores y "update x.x" i no quieres que la comunidad te odie     
- - no pidas el puesto de mantenedor     
-   - hiciste tu rom? felicidades! pero todavia tienes mucho que aprender antes de ser un mantenedor de una rom, un mantenedor es una persona que puede actualizar la rom constantemente y puede arreglar bugs leyendo registros y haciendo cambios, no quieres que los creadores de roms te pongan en una lista negra     
+     - Haz solo Lineage     
+        * para el primer intento te recomiendo que pruebes una rom simple, no pruebes aospa, yaap y roms que no tengan bases seguras     
+     - [Aprende git](git.md)     
+        * no es necesario para crear la rom pero lo necesitaras cuando quieras hacer cambios y no quieres publicar cambios sin autores y "update x.x" i no quieres que la comunidad te odie     
+     - no pidas el puesto de mantenedor     
+        * hiciste tu rom? felicidades! pero todavia tienes mucho que aprender antes de ser un mantenedor de una rom, un mantenedor es una persona que puede actualizar la rom constantemente y puede arreglar bugs leyendo registros y haciendo cambios, no quieres que los creadores de roms te pongan en una lista negra     
 
 ## Consiguiendo servidor     
 si no tienes las especificaciones que nombre recien necesitaras un server    
@@ -112,7 +112,9 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-XX (replace XX 
 repo sync -c --no-clone-bundle -j12 --force-sync
 ```
 
-deberias obtener un mensaje "repo sync succesfully"     
+!!! success
+
+    deberias obtener un mensaje "repo sync succesfully"     
 
 ok entonces, si tenemos local_manifests todo lo que necesitamos ya deberia estar clonado
 de lo contrario vamos a mirar en los repositorios que obtuvimos
@@ -122,11 +124,11 @@ hare un comando de ejemplo y ustedes repetiran
 git clone https://github.com/android_device_motorola_rhode device/motorola/rhode -b lineage-21 [la rama debe ser la misma que la de lineage or la versi"n de android]
 ```
 
-por ejemplo
+!!! example
 
-```
-git clone https://github.com/android_device_xiaomi_lavender device/xiaomi/lavender -b lineage-21
-```
+    ```
+    git clone https://github.com/android_device_xiaomi_lavender device/xiaomi/lavender -b lineage-21
+    ```
 
 android_device_xiaomi_lavender     
 en la ruta de descarga ponemos esto    
@@ -155,12 +157,9 @@ lunch lineage_devicename-userdebug
 m bacon
 ```
 
-si todo va bien tendremos el zip en out/target/product/devicename/    
-ahora prueba y buena suerte    
+!!! success
 
-## hazme una pregunta
-quieres que modifique la guia? necesitas ayuda con la guia? contactame en mi [Telegram](https://t.me/FPSensorSupport)    
-
-esta guia fue escrita con mis propias manos, con mi conocimiento y nunca busque en otro sitio para referencia mientras escribia (exeptuando los comandos de entorno que los tome de crDroid) por lo que puede tener problemas de redacci"n, haz sugerencias en mi grupo    
+    si todo va bien tendremos el zip en out/target/product/devicename/    
+    ahora prueba y buena suerte    
 
 muchas graciasr    

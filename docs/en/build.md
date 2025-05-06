@@ -2,23 +2,23 @@
 
 on this guide i will explain u how to find device trees, prepare the env, requeriments, and more    
 
-## Reqs    
- - 64bit decent cpu    
- - 32GB of RAM    
- - 500GB+ space (SSD recommended)    
- - a good internet (or much patienceand a very stable internet)    
- - common sense     
- - a bit of knowledge of linux terminal     
+!!! abstract "Reqs"    
+     - 64bit decent cpu    
+     - 32GB of RAM    
+     - 500GB+ space (SSD recommended)    
+     - a good internet (or much patienceand a very stable internet)    
+     - common sense     
+     - a bit of knowledge of linux terminal     
 
 can u use lowest specifications? ye, these ae the most recommended but u can try others. u can by example to use a lot of swap or waiting 3 days to the rom to be compiled but with these specifications u cant be sure that u wont have problems, another recomendation are that if u are going to make a PC to buildalways search AMD, the compilation is a work that uses the whole CPU at the same time and on long periods and for that a good AMD multicore is the best    
 
-## recomendations    
- - do just Lineage    
-   - for the first try i recommend u that u try a simple rom, dont try aospa, aosp, etc. do a rom that all of us know that works well    
- - learn git    
-   - its not necesary to make the rom but u will need it wen u want to do changes and u dont want to push commits without author and "update x.x" if u dont want the community hates u    
- - dont ask for mainteinership    
-   - u did your rom? congrats, but u still have to learn a lot to be a maintainer of a rom, a maintainer is a person that can update the rom constantly and can fix reported bugs reading logs and making changes in trees. u dont want that the creators of the rom to put u in a blacklist    
+!!! tip "recomendations"    
+     - do just Lineage    
+        * for the first try i recommend u that u try a simple rom, dont try aospa, aosp, etc. do a rom that all of us know that works well    
+     - learn git    
+        * its not necesary to make the rom but u will need it wen u want to do changes and u dont want to push commits without author and "update x.x" if u dont want the community hates u    
+     - dont ask for mainteinership    
+        * u did your rom? congrats, but u still have to learn a lot to be a maintainer of a rom, a maintainer is a person that can update the rom constantly and can fix reported bugs reading logs and making changes in trees. u dont want that the creators of the rom to put u in a blacklist    
 
 ## getting server
 
@@ -111,21 +111,25 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-XX (replace XX 
 repo sync -c --no-clone-bundle -j12 --force-sync
 ```
 
-u should get a message like "Repo sync succesfully"    
+!!! success
 
-ok so if we had local_manifests all things we need are cloned    
+    u should get a message like "Repo sync succesfully"    
+
+ok so if we have local_manifests all things we need are cloned    
 else we will take a look on the repos we got    
 i will do a command for example and then u guys will reply    
 
 ```
-git clone https://github.com/android_device_motorola_rhode device/motorola/rhode -b [the branch should be the same as lineage or android version]
+git clone https://github.com/android_device_brand_device device/brand/device -b [the branch should be the same as lineage or android version]
 ```
 
 for example
 
-```
-git clone https://github.com/1/android_device_xiaomi_lavender device/xiaomi/lavender -b lineage-21
-```
+!!! example
+
+    ```
+    git clone https://github.com/1/android_device_xiaomi_lavender device/xiaomi/lavender -b lineage-21
+    ```
 
 android_device_xiaomi_lavender    
 in the clkone path we do this    
@@ -157,13 +161,9 @@ lunch lineage_devicename-userdebug
 m bacon
 ```
 
-if everything goes well we will have the zip on out/target/product/devicename/    
-now test and good luck    
+!!! success
 
-## Ask me a question
-
-want me to modify the guide? need help with the guide? contact me in my [support group](https://t.me/FPSensorSupport)    
-
-this guide was done with my hands, with my knowledge and never searched in another site for a reference wen writing (besides these env commands that i took from crDroid) so it may can have redaction issues, make suggestions in my group    
+    if everything goes well we will have the zip on out/target/product/devicename/    
+    now test and good luck    
 
 thank you    
